@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Character Lookup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Rick and Morty — Character Lookup</h1>
+      <p class="brief">Assignment: retrieve and display data from a Web API using fetch(). API used: Rick and Morty API (no API key required). Enter a character name and get image, species, status, gender, current location and episode count.</p>
+    </header>
+
+    <form id="weather-form" novalidate>
+      <label for="city">Name</label>
+      <input id="city" name="city" type="text" placeholder="e.g. Rick" autocomplete="off" />
+      <div id="error" role="alert" aria-live="polite"></div>
+      <button id="submit" type="submit">Lookup</button>
+    </form>
+
+    <section id="result" class="hidden">
+      <div class="weather-card">
+        <div class="weather-header">
+          <h2 id="location"></h2>
+          <div class="weather-icon"><img id="icon" alt=""></div>
+        </div>
+        <ul class="info-list">
+          <li><strong>Species:</strong> <span id="temp"></span></li>
+          <li><strong>Status:</strong> <span id="feels"></span></li>
+          <li><strong>Gender:</strong> <span id="desc"></span></li>
+          <li><strong>Current location:</strong> <span id="humidity"></span></li>
+          <li><strong>Episode count:</strong> <span id="wind"></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p class="note">Notes: No API key required. Publish to GitHub Pages by pushing these files to the repo root and enabling Pages.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

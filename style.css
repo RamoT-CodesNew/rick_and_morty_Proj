@@ -1,0 +1,94 @@
+:root{
+  --card-bg: rgba(255,255,255,0.9);
+  --accent: #2b6cb0;
+  --radius: 12px;
+  --max-width: 760px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,#e6f2ff 0%,#f7fbff 100%);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  transition:background-image 0.4s ease,background-color 0.4s ease;
+}
+.container{
+  width:100%;
+  max-width:var(--max-width);
+}
+header h1{
+  margin:0 0 8px 0;
+  font-size:28px;
+  color:#0b2447;
+}
+.brief{
+  margin:0 0 18px 0;
+  color:#1f2937;
+  font-size:14px;
+}
+form{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:18px;
+}
+label{display:none}
+input{
+  flex:1;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #cbd5e1;
+  font-size:16px;
+  outline:none;
+}
+input:focus{box-shadow:0 0 0 3px rgba(66,153,225,0.12);border-color:var(--accent)}
+button{
+  padding:12px 16px;
+  border-radius:8px;
+  border:0;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+button:active{transform:translateY(1px)}
+#error{
+  color:#b02a37;
+  font-size:13px;
+  margin-top:8px;
+  min-height:18px;
+}
+.hidden{display:none}
+.weather-card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:0 8px 24px rgba(11,36,71,0.08);
+}
+.weather-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.weather-header h2{
+  margin:0;
+  font-size:20px;
+  color:#0b2447;
+}
+.weather-icon img{width:72px;height:72px;display:block}
+.info-list{list-style:none;padding:12px 0 0 0;margin:0}
+.info-list li{padding:6px 0;border-top:1px solid #eef2f7;color:#1f2937}
+.note{margin-top:14px;font-size:13px;color:#475569}
+body.cold{background-image:url('https://source.unsplash.com/1600x900/?winter');background-size:cover;background-position:center}
+body.cool{background-image:url('https://source.unsplash.com/1600x900/?clouds');background-size:cover;background-position:center}
+body.warm{background-image:url('https://source.unsplash.com/1600x900/?sunny');background-size:cover;background-position:center}
+body.hot{background-image:url('https://source.unsplash.com/1600x900/?desert');background-size:cover;background-position:center}
+@media(max-width:560px){
+  .weather-header{flex-direction:row;gap:8px}
+  .weather-icon img{width:56px;height:56px}
+}
